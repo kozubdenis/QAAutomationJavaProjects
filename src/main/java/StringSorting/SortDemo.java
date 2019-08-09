@@ -22,6 +22,7 @@ public class SortDemo {
                 "Hello",
                 "Bye",
                 "Zero",
+                "Auto",
                 "Main",
                 "SortDemo",
                 "lesson07"};
@@ -38,6 +39,10 @@ public class SortDemo {
         // 'Способ упорядочивания' мы объясняем через
         // реализацию интерфейса 'Comparator'
         Arrays.sort(array, new StringBy3LetterComparator());
+        System.out.println(Arrays.toString(array));
+
+        System.out.println("Вывод строки отсортированой по алфавиту:");
+        Arrays.sort(array, new StringBy1LetterComparator());
         System.out.println(Arrays.toString(array));
 
         Person[] persons = {
