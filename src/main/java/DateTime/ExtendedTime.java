@@ -7,7 +7,7 @@ public class ExtendedTime extends DateTime {
 
     }
 
-    public ExtendedTime(int millisecond) {
+    public ExtendedTime(int millisecond) throws IllegalTimeException {
         super(12,13,14);
         this.millisecond = millisecond;
 
