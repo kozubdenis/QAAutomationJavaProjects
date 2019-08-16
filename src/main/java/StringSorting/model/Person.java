@@ -3,14 +3,25 @@ package StringSorting.model;
 public class Person implements Comparable<Person> {
     private int age;
     private String name;
+    private Long id;
 
     public Person(int age, String name) {
         this.age = age;
         this.name = name;
     }
 
+    public Person(Long id, int age, String name) {
+        this.age = age;
+        this.name = name;
+        this.id = id;
+    }
+
     public int getAge() {
         return age;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setAge(int age) {
@@ -27,10 +38,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public String toString() {
-        return "{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
+        return "{id=" + id + ", age=" + age + ", name='" + name + "'" + "}";
     }
 
     // Для сортировки
